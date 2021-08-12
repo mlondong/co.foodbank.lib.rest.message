@@ -3,8 +3,8 @@ package co.com.foodbank.message.v1.model;
 import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import co.com.foodbank.message.dto.IMessage;
-import co.com.foodbank.user.model.IUser;
+import co.com.foodbank.message.interfaces.IMessage;
+import co.com.foodbank.user.request.RequestUserData;
 
 /**
  * Class to handle all message by foodbank.
@@ -19,15 +19,26 @@ public class Message implements IMessage {
 
     private Date dateMessage;
 
+    private String subject;
+
     private String description;
 
-    private IUser user;
+    private RequestUserData user;
 
 
     /**
      * Default constructor.
      */
-    private Message() {}
+    public Message() {}
+
+    @Override
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
 
     @Override
     public String getId() {
@@ -60,15 +71,13 @@ public class Message implements IMessage {
     }
 
     @Override
-    public IUser getUser() {
+    public RequestUserData getUser() {
         return user;
     }
 
 
-    public void setUser(IUser user) {
+    public void setUser(RequestUserData user) {
         this.user = user;
     }
-
-
 
 }

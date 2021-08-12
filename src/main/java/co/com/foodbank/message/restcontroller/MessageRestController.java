@@ -1,5 +1,6 @@
 package co.com.foodbank.message.restcontroller;
 
+import java.util.Collection;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -15,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import co.com.foodbank.message.dto.IMessage;
 import co.com.foodbank.message.dto.MessageDTO;
 import co.com.foodbank.message.exception.MessageErrorException;
 import co.com.foodbank.message.exception.MessageNotFoundException;
+import co.com.foodbank.message.interfaces.IMessage;
 import co.com.foodbank.message.v1.controller.MessageController;
 import co.com.foodbank.message.v1.model.Message;
 import io.swagger.v3.oas.annotations.Operation;
@@ -69,6 +70,34 @@ public class MessageRestController {
             throws MessageNotFoundException {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(controller.findById(id));
+    }
+
+
+
+    /**
+     * Method to find Message By Id.
+     * 
+     * @param id
+     * @return {@code ResponseEntity<IMessage>}
+     * @throws MessageNotFoundException
+     */
+    @Operation(summary = "Find All Messages.")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(responseCode = "200",
+                            description = "Message found.",
+                            content = {
+                                    @Content(mediaType = "application/json")}),
+                    @ApiResponse(responseCode = "500",
+                            description = "Service not available.",
+                            content = @Content),
+                    @ApiResponse(responseCode = "400",
+                            description = "Bad request.", content = @Content)})
+    @GetMapping(path = "/findAll")
+    public ResponseEntity<Collection<IMessage>> findById()
+            throws MessageNotFoundException {
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(controller.findByAll());
     }
 
 
