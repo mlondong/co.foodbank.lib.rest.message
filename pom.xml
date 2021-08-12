@@ -75,6 +75,9 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 
+
+
+
 		<!-- DTOs -->
 		<dependency>
 			<groupId>co.com.foodbank.message</groupId>
@@ -89,8 +92,12 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
-
-
+		<!-- SDK user -->
+		<dependency>
+			<groupId>co.com.foodbank.user</groupId>
+			<artifactId>co.foodbank.lib.sdk.user</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 	</dependencies>
 

@@ -34,7 +34,6 @@ public class ControllerAdvisor {
     public ResponseEntity<Object> handleNullPointerException(
             NullPointerException ex) {
 
-
         ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR,
                 ex.getLocalizedMessage(), ex.getMessage());
         return new ResponseEntity<Object>(apiError, new HttpHeaders(),
