@@ -92,12 +92,7 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
-		<!-- SDK user -->
-		<dependency>
-			<groupId>co.com.foodbank.user</groupId>
-			<artifactId>co.foodbank.lib.sdk.user</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 
 	</dependencies>
 

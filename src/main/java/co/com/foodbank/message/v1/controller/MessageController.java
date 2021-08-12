@@ -13,9 +13,6 @@ import co.com.foodbank.message.exception.MessageErrorException;
 import co.com.foodbank.message.exception.MessageNotFoundException;
 import co.com.foodbank.message.interfaces.IMessage;
 import co.com.foodbank.message.service.MessageService;
-import co.com.foodbank.user.sdk.exception.SDKUserServiceException;
-import co.com.foodbank.user.sdk.exception.SDKUserServiceIllegalArgumentException;
-import co.com.foodbank.user.sdk.exception.SDKUserServiceNotAvailableException;
 
 /**
  * @author mauricio.londono@gmail.com co.com.foodbank.message.v1.controller
