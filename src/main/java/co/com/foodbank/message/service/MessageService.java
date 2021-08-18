@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import co.com.foodbank.message.dto.MessageDTO;
+import co.com.foodbank.message.dto.interfaces.IMessage;
 import co.com.foodbank.message.exception.MessageErrorException;
 import co.com.foodbank.message.exception.MessageNotFoundException;
-import co.com.foodbank.message.interfaces.IMessage;
 import co.com.foodbank.message.repository.MessageRepository;
 import co.com.foodbank.message.v1.model.Message;
 

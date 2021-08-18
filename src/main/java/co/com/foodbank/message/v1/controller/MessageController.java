@@ -9,9 +9,9 @@ import org.springframework.stereotype.Controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import co.com.foodbank.message.dto.MessageDTO;
+import co.com.foodbank.message.dto.interfaces.IMessage;
 import co.com.foodbank.message.exception.MessageErrorException;
 import co.com.foodbank.message.exception.MessageNotFoundException;
-import co.com.foodbank.message.interfaces.IMessage;
 import co.com.foodbank.message.service.MessageService;
 
 /**
